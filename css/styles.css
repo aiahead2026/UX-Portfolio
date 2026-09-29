@@ -43,8 +43,8 @@ header.site-header nav a:hover,header.site-header nav a[aria-current="page"]{col
 .toggle{background:none;border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:16px;margin-left:6px}
 
 /* home hero */
-.hero{padding:88px 0 56px;display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:start}
-.hero h1{font-size:clamp(40px,6.2vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 20px}
+.hero{padding:64px 0 56px;display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:start}
+.hero h1{font-size:clamp(32px,4.96vw,60.8px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 20px}
 .hero h1 .role{display:block;color:var(--muted);font-weight:600;font-size:.46em;letter-spacing:-.015em;margin-top:14px}
 .tagline{font-size:20px;color:var(--muted);margin:0 0 36px;max-width:40ch}
 .intro p{margin:0 0 18px}
@@ -72,7 +72,7 @@ header.site-header nav a:hover,header.site-header nav a[aria-current="page"]{col
 .case-top{padding:64px 0 32px}
 .back{font-size:15px;color:var(--muted);text-decoration:none}
 .back:hover{color:var(--text)}
-.case-top h1{font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.03em;margin:20px 0 16px;max-width:20ch}
+.case-top h1{font-size:clamp(27.2px,4vw,46.4px);line-height:1.05;letter-spacing:-.03em;margin:20px 0 16px;max-width:20ch}
 .lede{font-size:21px;color:var(--muted);max-width:52ch;margin:0}
 .case-hero{aspect-ratio:21/9;border-radius:18px;background:var(--surface);border:1px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:14px;margin:8px 0 56px}
 .case{display:grid;grid-template-columns:200px 1fr;gap:48px}
@@ -102,7 +102,7 @@ footer a:hover{color:var(--text)}
 
 
 @media (max-width:860px){
-  .hero{grid-template-columns:1fr;padding-top:48px;gap:32px}
+  .hero{grid-template-columns:1fr;padding-top:24px;gap:32px}
   .portrait{max-width:280px;aspect-ratio:1}
   .grid{grid-template-columns:1fr}
   .case{grid-template-columns:1fr}
@@ -129,3 +129,26 @@ footer a:hover{color:var(--text)}
 /* section list beside case studies */
 .toc{display:flex;flex-direction:column;gap:2px;line-height:1.4}
 .toc a{padding:6px 0 6px 12px}
+
+/* paragraph line height, reduced 20% */
+p{line-height:1.32}
+.intro p:first-child,.insight{line-height:1.24}
+.card p{line-height:1.2}
+
+/* next project link */
+.next a{display:inline-block;transition:color .2s}
+.next a .arrow{display:inline-block;margin-left:8px;transition:transform .2s}
+.next a:hover,.next a:focus-visible{color:var(--accent)}
+.next a:hover .arrow,.next a:focus-visible .arrow{transform:translateX(6px)}
+.next a:hover small{color:var(--text)}
+
+/* image lightbox */
+.case figure .media:not(.video):not(.missing) img{cursor:zoom-in}
+.lightbox{border:0;padding:0;margin:0;width:100vw;height:100vh;max-width:none;max-height:none;background:rgba(6,9,14,.92);display:none;place-items:center}
+.lightbox[open]{display:grid}
+.lightbox::backdrop{background:rgba(6,9,14,.92)}
+.lightbox img{max-width:calc(100vw - 48px);max-height:calc(100vh - 96px);width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lightbox .lb-close{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(20,26,35,.8);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lightbox .lb-close:hover{background:rgba(143,180,255,.25)}
+.lightbox .lb-caption{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:24px;right:24px;text-align:center;color:#C9D1DD;font-size:14px}
+body.lb-lock{overflow:hidden}
