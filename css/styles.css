@@ -37,9 +37,9 @@ header.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;b
 .brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
 .brand b{font-weight:700;font-size:17px}
 .brand span{font-size:13px;color:var(--muted)}
-nav{display:flex;align-items:center;gap:4px}
-nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted);padding:8px 12px;border-radius:8px}
-nav a:hover,nav a[aria-current="page"]{color:var(--text);background:var(--raised)}
+header.site-header nav{display:flex;align-items:center;gap:4px}
+header.site-header nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted);padding:8px 12px;border-radius:8px}
+header.site-header nav a:hover,header.site-header nav a[aria-current="page"]{color:var(--text);background:var(--raised)}
 .toggle{background:none;border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:16px;margin-left:6px}
 
 /* home hero */
@@ -107,7 +107,7 @@ footer a:hover{color:var(--text)}
   .grid{grid-template-columns:1fr}
   .case{grid-template-columns:1fr}
   .toc{display:none}
-  nav a.hide-sm{display:none}
+  header.site-header nav a.hide-sm{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
@@ -125,3 +125,7 @@ footer a:hover{color:var(--text)}
 .skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--accent-ink);padding:8px 12px;border-radius:8px;z-index:20}
 .skip:focus{left:12px}
 .lede a{color:var(--accent)}
+
+/* section list beside case studies */
+.toc{display:flex;flex-direction:column;gap:2px;line-height:1.4}
+.toc a{padding:6px 0 6px 12px}
