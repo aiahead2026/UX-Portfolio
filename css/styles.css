@@ -163,3 +163,14 @@ body.lb-lock{overflow:hidden}
 /* home project grid without heading */
 .home-grid{margin-top:64px}
 @media (max-width:860px){.home-grid{margin-top:40px}}
+
+/* social icons under portrait */
+.portrait-col{display:flex;flex-direction:column;align-items:center}
+.portrait-col .portrait{width:100%}
+.social{display:flex;justify-content:center;gap:16px;margin-top:24px}
+.social-btn{position:relative;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--muted);text-decoration:none;transition:color .2s,background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.social-btn svg{width:22px;height:22px}
+.social-btn:hover,.social-btn:focus-visible{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 35%,transparent)}
+.social-btn::after{content:attr(data-tip);position:absolute;top:calc(100% + 10px);left:50%;transform:translate(-50%,-4px);white-space:nowrap;font-size:13px;font-weight:600;color:var(--text);background:var(--raised);border:1px solid var(--line);padding:5px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.social-btn:hover::after,.social-btn:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+@media (hover:none){.social-btn::after{display:none}}
