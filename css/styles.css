@@ -174,3 +174,11 @@ body.lb-lock{overflow:hidden}
 .social-btn::after{content:attr(data-tip);position:absolute;top:calc(100% + 10px);left:50%;transform:translate(-50%,-4px);white-space:nowrap;font-size:13px;font-weight:600;color:var(--text);background:var(--raised);border:1px solid var(--line);padding:5px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
 .social-btn:hover::after,.social-btn:focus-visible::after{opacity:1;transform:translate(-50%,0)}
 @media (hover:none){.social-btn::after{display:none}}
+
+/* case study header with cover */
+.case-top--cover{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;padding-bottom:56px}
+.case-top--cover h1{max-width:none}
+.case-cover{border-radius:18px;box-shadow:0 1px 0 var(--line)}
+@media (max-width:860px){
+  .case-top--cover{grid-template-columns:1fr;gap:28px;padding-bottom:40px}
+}
