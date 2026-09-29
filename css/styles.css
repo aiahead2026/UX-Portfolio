@@ -43,7 +43,7 @@ header.site-header nav a:hover,header.site-header nav a[aria-current="page"]{col
 .toggle{background:none;border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:16px;margin-left:6px}
 
 /* home hero */
-.hero{padding:64px 0 56px;display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:start}
+.hero{padding:32px 0 0px;display:grid;grid-template-columns:1.35fr .9fr;gap:48px;align-items:start}
 .hero h1{font-size:clamp(32px,4.96vw,60.8px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 20px}
 .hero h1 .role{display:block;color:var(--muted);font-weight:600;font-size:.46em;letter-spacing:-.015em;margin-top:14px}
 .tagline{font-size:20px;color:var(--muted);margin:0 0 36px;max-width:40ch}
@@ -130,10 +130,9 @@ footer a:hover{color:var(--text)}
 .toc{display:flex;flex-direction:column;gap:2px;line-height:1.4}
 .toc a{padding:6px 0 6px 12px}
 
-/* paragraph line height, reduced 20% */
-p{line-height:1.32}
-.intro p:first-child,.insight{line-height:1.24}
-.card p{line-height:1.2}
+/* paragraph line height */
+p{line-height:1.5}
+.intro p:first-child,.insight,.card p{line-height:1.5}
 
 /* next project link */
 .next a{display:inline-block;transition:color .2s}
@@ -152,3 +151,12 @@ p{line-height:1.32}
 .lightbox .lb-close:hover{background:rgba(143,180,255,.25)}
 .lightbox .lb-caption{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:24px;right:24px;text-align:center;color:#C9D1DD;font-size:14px}
 body.lb-lock{overflow:hidden}
+
+/* theme-matched covers */
+.cover-light{display:none!important}
+:root[data-theme="light"] .cover-dark{display:none!important}
+:root[data-theme="light"] .cover-light{display:block!important}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]) .cover-dark{display:none!important}
+  :root:not([data-theme="dark"]) .cover-light{display:block!important}
+}
