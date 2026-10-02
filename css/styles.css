@@ -182,3 +182,11 @@ body.lb-lock{overflow:hidden}
 @media (max-width:860px){
   .case-top--cover{grid-template-columns:1fr;gap:28px;padding-bottom:40px}
 }
+
+/* footer icons */
+.foot{align-items:center}
+.social--footer{margin-top:0;gap:12px}
+.social--footer .social-btn{width:42px;height:42px}
+.social--footer .social-btn svg{width:18px;height:18px}
+.social--footer .social-btn::after{top:auto;bottom:calc(100% + 10px);transform:translate(-50%,4px)}
+.social--footer .social-btn:hover::after,.social--footer .social-btn:focus-visible::after{transform:translate(-50%,0)}
