@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FlipItOrNot | Omar Benmoussa</title>
+<meta name="description" content="Turning my own fix-and-flip deal analysis into a guided web app. Work in progress.">
+<link rel="canonical" href="https://ux-portfolio-ten-smoky.vercel.app/flipitornot">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Omar Benmoussa">
+<meta property="og:title" content="FlipItOrNot | Omar Benmoussa">
+<meta property="og:description" content="Turning my own fix-and-flip deal analysis into a guided web app. Work in progress.">
+<meta property="og:url" content="https://ux-portfolio-ten-smoky.vercel.app/flipitornot">
+<meta property="og:image" content="https://ux-portfolio-ten-smoky.vercel.app/assets/images/covers/flipitornot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#10151D">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/"><b>Omar Benmoussa</b><span>UX Design Specialist</span></a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/work" aria-current="page">Work</a>
+      <button class="toggle" id="theme-toggle" type="button" aria-label="Switch light or dark theme">◐</button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <div class="case-top case-top--cover"><div class="case-intro"><a class="back" href="/work">‹ All work</a><h1>FlipItOrNot</h1><p class="lede">Turning my own fix-and-flip deal analysis into a guided web app. Work in progress.</p></div><div class="media case-cover" style="aspect-ratio:16/10" data-label="Image: assets/images/covers/flipitornot.jpg"><img class="cover-dark" src="/assets/images/covers/flipitornot.jpg" alt="FlipItOrNot cover" decoding="async" onerror="this.parentElement.classList.add('missing');this.remove()"><img class="cover-light" src="/assets/images/covers/flipitornot-light.jpg" alt="FlipItOrNot cover" decoding="async" onerror="this.parentElement.classList.add('missing');this.remove()"></div></div>
+  <div class="case">
+    <nav class="toc" aria-label="On this page"><a href="#project-overview">Project Overview</a><a href="#the-challenge">The challenge</a><a href="#my-role">My role</a><a href="#the-solution">The Solution</a><a href="#where-it-stands">Where it stands</a><a href="#reflection">Reflection</a></nav>
+    <article class="prose"><h2 id="project-overview">Project Overview</h2><p>FlipItOrNot is a web app I&#x27;m designing and building to answer one question for real estate investors: should I flip this property or walk away? It started as my own process for evaluating fix-and-flip deals in the Raleigh area, a mix of spreadsheets, county records, and notes, and is becoming a single guided flow that ends in a clear verdict.</p><p>The project is in active development. The core analysis flow works end to end, and I&#x27;m continuing to refine it release by release.</p><h2 id="the-challenge">The challenge</h2><p>Evaluating a flip means pulling together many moving parts: comparable sales, rehab scope, holding costs, and financing, often under a short due-diligence window. Doing it by hand is slow, and it&#x27;s easy to miss a cost or lean on the wrong comps. The goal was a tool that structures that thinking, so every deal is judged the same way and the reasoning behind each decision stays visible.</p><h2 id="my-role">My role</h2><p>I&#x27;m the designer, product owner, and developer on this project. That meant:</p><ul><li>Mapping my own analysis process into a step-by-step flow</li><li>Designing the interface, visual system, and component patterns</li><li>Building the app with Next.js, TypeScript, Tailwind CSS, and Supabase, deployed on Vercel</li><li>Importing and cleaning about 40,000 Wake County single-family sales records to power comp selection</li><li>Learning to code along the way, with each phase reviewed and tested before moving to the next</li></ul><h2 id="the-solution">The Solution</h2><p>The app guides each deal through six steps, each one building on the last:</p><ul><li>Dashboard: every deal at a glance, with its verdict, the reason behind it, and how many comps support it.</li><li>Deal Detail: the property basics that anchor the analysis.</li><li>Comp Selection: comparable sales scored by proximity, so the strongest matches rise to the top and can be picked or dropped.</li><li>Rehab and Holding Costs: structured inputs for scope of work, plus the carrying costs that quietly erode a margin.</li><li>Summary &amp; Review: everything on one screen before committing to a decision.</li><li>Analysis &amp; Verdict: a clear call, with the numbers and reasoning that support it.</li></ul><figure><div class="media" style="aspect-ratio:16/9" data-label="Image: assets/images/flipitornot/01-dashboard.jpg"><img src="/assets/images/flipitornot/01-dashboard.jpg" alt="FlipItOrNot dashboard with deal cards and verdicts" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('missing');this.remove()"></div><figcaption>The dashboard shows each deal&#x27;s verdict, the reason behind it, and its comp count at a glance.</figcaption></figure><figure><div class="media" style="aspect-ratio:16/9" data-label="Image: assets/images/flipitornot/02-comp-selection.jpg"><img src="/assets/images/flipitornot/02-comp-selection.jpg" alt="Comp selection screen with scored comparable sales" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('missing');this.remove()"></div><figcaption>Comps are scored by location so the strongest matches surface first, then selected to estimate after-repair value.</figcaption></figure><figure><div class="media" style="aspect-ratio:16/9" data-label="Image: assets/images/flipitornot/03-rehab-costs.jpg"><img src="/assets/images/flipitornot/03-rehab-costs.jpg" alt="Rehab and holding cost inputs" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('missing');this.remove()"></div><figcaption>Rehab and holding costs are entered in structured steps, so nothing that affects the margin gets missed.</figcaption></figure><figure><div class="media" style="aspect-ratio:16/9" data-label="Image: assets/images/flipitornot/04-verdict.jpg"><img src="/assets/images/flipitornot/04-verdict.jpg" alt="Analysis and verdict screen" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('missing');this.remove()"></div><figcaption>The flow ends in a clear verdict, with the supporting numbers and reasoning on the same screen.</figcaption></figure><h2 id="where-it-stands">Where it stands</h2><p>The full analysis flow, from Dashboard to Verdict, works end to end on real county data. Next on the roadmap:</p><ul><li>Polishing how comps are presented in the summary</li><li>PDF export to share an analysis with partners and lenders</li><li>Deal history and a pipeline view to track opportunities over time</li><li>A security review of data access rules</li></ul><h2 id="reflection">Reflection</h2><p>Building this tool changed how I think about my own design work. Being the user, the designer, and the developer at once made every trade-off concrete: a confusing step slowed me down the next time I analyzed a deal. It&#x27;s also a reminder that the best way to structure a complex decision is to make the reasoning visible, not just the result.</p></article>
+  </div>
+  <div class="next"><a href="/expense-tracker"><small>Next project</small>Expense Tracker<span class="arrow" aria-hidden="true">→</span></a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span>© <span id="year">2026</span> Omar Benmoussa</span>
+    <div class="social social--footer">
+      <a class="social-btn" href="mailto:benmoussa.o@gmail.com" aria-label="Email me" data-tip="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="social-btn" href="https://www.linkedin.com/in/omar-benmoussa-98033015/" target="_blank" rel="noopener" aria-label="LinkedIn" data-tip="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.96 1.96 0 100 3.92 1.96 1.96 0 000-3.92zM20.44 13.4c0-3.1-1.65-4.54-3.86-4.54-1.78 0-2.58.98-3.02 1.67V8.5h-3.38V20h3.38v-6.1c0-1.6.3-3.15 2.29-3.15 1.96 0 1.99 1.83 1.99 3.25V20h3.38l.22-6.6z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
